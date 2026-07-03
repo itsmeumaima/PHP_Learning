@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Functions in PHP</title>
+    <title>Control Structures in PHP</title>
 
     <style>
         *{
@@ -19,7 +19,7 @@
         }
 
         .container{
-            max-width:900px;
+            max-width:950px;
             margin:auto;
             background:#fff;
             padding:35px;
@@ -35,15 +35,10 @@
 
         h2{
             color:#34495e;
-            margin-top:25px;
+            margin-top:30px;
             margin-bottom:10px;
             border-left:5px solid #3498db;
             padding-left:10px;
-        }
-
-        h4{
-            color:#2c3e50;
-            margin-bottom:10px;
         }
 
         p{
@@ -66,9 +61,10 @@
         .output{
             background:#f4f9ff;
             border-left:5px solid #3498db;
+            border-right:5px solid #3498db;
             padding:20px;
             border-radius:10px;
-            margin-top:20px;
+            margin-top:15px;
             box-shadow:0 5px 10px rgba(0,0,0,0.08);
         }
 
@@ -77,10 +73,11 @@
             font-size:18px;
             color:#27ae60;
             font-weight:bold;
+            line-height:1.8;
         }
 
         hr{
-            margin:30px 0;
+            margin:35px 0;
             border:none;
             border-top:2px dashed #ccc;
         }
@@ -104,53 +101,128 @@
 
 <div class="container">
 
-    <h1>Functions in PHP</h1>
+    <h1>Control Structures in PHP</h1>
 
     <p>
-        Functions are reusable blocks of code that perform a specific task.
-        They help organize code, reduce repetition, improve readability, and make programs easier to maintain.
-        PHP provides many built-in functions, and developers can also create their own custom functions.
+        Control structures determine the flow of execution in a PHP program.
+        They allow you to make decisions, repeat tasks, and execute different
+        blocks of code based on conditions.
     </p>
 
-    <h2>Defining a Function</h2>
+    <!-- IF Statement -->
+    <h2>1. If Statement</h2>
 
 <pre>
-function functionName($parameter1, $parameter2){
-    // Code to be executed
-    return $result;
+$age = 20;
+
+if($age >= 18){
+    echo "You are eligible to vote.";
 }
 </pre>
 
-    <h2>Example 1: Greeting Function</h2>
-
     <div class="output">
         <h4>Output:</h4>
-
         <div class="result">
             <?php
-                function greet(string $name){
-                    echo "Hello, " . $name . "!";
-                }
+                $age = 20;
 
-                greet("Alice");
+                if($age >= 18){
+                    echo "You are eligible to vote.";
+                }
             ?>
         </div>
     </div>
 
     <hr>
 
-    <h2>Example 2: Cube Function</h2>
+    <!-- Switch -->
+    <h2>2. Switch Statement</h2>
+
+<pre>
+$day = "Monday";
+
+switch($day){
+    case "Monday":
+        echo "Start of the week.";
+        break;
+
+    case "Friday":
+        echo "Weekend is near!";
+        break;
+
+    default:
+        echo "Have a nice day!";
+}
+</pre>
 
     <div class="output">
         <h4>Output:</h4>
-
         <div class="result">
             <?php
-                function calculateCube(int $number){
-                    return $number * $number * $number;
-                }
+                $day = "Monday";
 
-                echo "Cube of 3 = " . calculateCube(3);
+                switch($day){
+                    case "Monday":
+                        echo "Start of the week.";
+                        break;
+
+                    case "Friday":
+                        echo "Weekend is near!";
+                        break;
+
+                    default:
+                        echo "Have a nice day!";
+                }
+            ?>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- While Loop -->
+    <h2>3. While Loop</h2>
+
+<pre>
+$count = 1;
+
+while($count <= 5){
+    echo $count . "&lt;br&gt;";
+    $count++;
+}
+</pre>
+
+    <div class="output">
+        <h4>Output:</h4>
+        <div class="result">
+            <?php
+                $count = 1;
+
+                while($count <= 5){
+                    echo $count . "<br>";
+                    $count++;
+                }
+            ?>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- For Loop -->
+    <h2>4. For Loop</h2>
+
+<pre>
+for($i = 1; $i <= 5; $i++){
+    echo "Number: " . $i . "&lt;br&gt;";
+}
+</pre>
+
+    <div class="output">
+        <h4>Output:</h4>
+        <div class="result">
+            <?php
+                for($i = 1; $i <= 5; $i++){
+                    echo "Number: " . $i . "<br>";
+                }
             ?>
         </div>
     </div>
