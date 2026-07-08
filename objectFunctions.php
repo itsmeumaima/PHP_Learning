@@ -286,19 +286,19 @@ class Chef{
 
     function makeChicken(){
 
-        echo "🍗 Chef makes Chicken.<br>";
+        echo "Chef makes Chicken.<br>";
 
     }
 
     function makeSalad(){
 
-        echo "🥗 Chef makes Salad.<br>";
+        echo "Chef makes Salad.<br>";
 
     }
 
     function makeSpecialDish(){
 
-        echo "🥩 Chef makes BBQ Ribs.<br>";
+        echo "Chef makes BBQ Ribs.<br>";
 
     }
 
@@ -308,13 +308,13 @@ class ItalianChef extends Chef{
 
     function makePasta(){
 
-        echo "🍝 Italian Chef makes Pasta.<br>";
+        echo "Italian Chef makes Pasta.<br>";
 
     }
 
     function makeSpecialDish(){
 
-        echo "🍕 Italian Chef makes Lasagna.<br>";
+        echo "Italian Chef makes Lasagna.<br>";
 
     }
 
