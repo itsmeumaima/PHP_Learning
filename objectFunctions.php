@@ -77,112 +77,112 @@
 </head>
 <body>
 
-<h1>PHP Object Oriented Programming (OOP)</h1>
+    <h1>PHP Object Oriented Programming (OOP)</h1>
 
-<!-- ========================================================= -->
-<div class="card">
+    <!-- ========================================================= -->
+    <div class="card">
 
-<h2>1. Object Functions</h2>
+    <h2>1. Object Functions</h2>
 
-<p>
-Object functions (methods) define the behavior of an object.
-Here we create a Student class that checks whether a student
-has honors based on GPA.
-</p>
+    <p>
+    Object functions (methods) define the behavior of an object.
+    Here we create a Student class that checks whether a student
+    has honors based on GPA.
+    </p>
 
-<?php
+    <?php
 
-class Student{
+    class Student{
 
-    public $name;
-    public $major;
-    public $gpa;
+        public $name;
+        public $major;
+        public $gpa;
 
-    function __construct($name,$major,$gpa){
-        $this->name=$name;
-        $this->major=$major;
-        $this->gpa=$gpa;
-    }
-
-    function hasHonors(){
-
-        if($this->gpa>=3.5){
-            return true;
+        function __construct($name,$major,$gpa){
+            $this->name=$name;
+            $this->major=$major;
+            $this->gpa=$gpa;
         }
 
-        return false;
+        function hasHonors(){
+
+            if($this->gpa>=3.5){
+                return true;
+            }
+
+            return false;
+        }
+
     }
 
-}
+    $student1=new Student("Umaima","Software Engineering",3.8);
+    $student2=new Student("Ali","Business",3.2);
 
-$student1=new Student("Umaima","Software Engineering",3.8);
-$student2=new Student("Ali","Business",3.2);
+    ?>
 
-?>
+    <div class="output">
 
-<div class="output">
+    <table>
 
-<table>
+    <tr>
+    <th>Name</th>
+    <th>Major</th>
+    <th>GPA</th>
+    <th>Honors</th>
+    </tr>
 
-<tr>
-<th>Name</th>
-<th>Major</th>
-<th>GPA</th>
-<th>Honors</th>
-</tr>
+    <tr>
+    <td><?php echo $student1->name;?></td>
+    <td><?php echo $student1->major;?></td>
+    <td><?php echo $student1->gpa;?></td>
+    <td>
 
-<tr>
-<td><?php echo $student1->name;?></td>
-<td><?php echo $student1->major;?></td>
-<td><?php echo $student1->gpa;?></td>
-<td>
+    <?php
+    echo $student1->hasHonors()
+    ?
+    "<span class='success'>Yes</span>"
+    :
+    "<span class='danger'>No</span>";
+    ?>
 
-<?php
-echo $student1->hasHonors()
-?
-"<span class='success'>Yes</span>"
-:
-"<span class='danger'>No</span>";
-?>
+    </td>
+    </tr>
 
-</td>
-</tr>
+    <tr>
+    <td><?php echo $student2->name;?></td>
+    <td><?php echo $student2->major;?></td>
+    <td><?php echo $student2->gpa;?></td>
+    <td>
 
-<tr>
-<td><?php echo $student2->name;?></td>
-<td><?php echo $student2->major;?></td>
-<td><?php echo $student2->gpa;?></td>
-<td>
+    <?php
+    echo $student2->hasHonors()
+    ?
+    "<span class='success'>Yes</span>"
+    :
+    "<span class='danger'>No</span>";
+    ?>
 
-<?php
-echo $student2->hasHonors()
-?
-"<span class='success'>Yes</span>"
-:
-"<span class='danger'>No</span>";
-?>
+    </td>
+    </tr>
 
-</td>
-</tr>
+    </table>
 
-</table>
+    </div>
 
-</div>
+    </div>
 
-</div>
+    <!-- ========================================================= -->
 
-<!-- ========================================================= -->
+    <div class="card">
 
-<div class="card">
+    <h2>2. Getter and Setter</h2>
 
-<h2>2. Getter and Setter</h2>
+    <p>
 
-<p>
+    A Getter retrieves private data while a Setter validates data
+    before storing it. This helps achieve data encapsulation.
 
-A Getter retrieves private data while a Setter validates data
-before storing it. This helps achieve data encapsulation.
-
-</p>
+    </p>
 
 <?php
 
