@@ -1,19 +1,19 @@
 <?php
-// Variables
+
 $age = 20;
 $price = 99.99;
 $large = 2.5e3;
 
-// Calculations
+
 $a = 20;
 $b = 6;
 
-// Increment and Decrement
+
 $x = 5;
 $increment = $x + 1;
 $decrement = $x - 1;
 
-// Pre and Post Increment
+
 $pre = 5;
 $preResult = ++$pre;
 
