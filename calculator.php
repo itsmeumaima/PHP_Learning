@@ -36,13 +36,13 @@ if (isset($_POST['num1']) && isset($_POST['num2']) && isset($_POST['operation'])
 
             case "multiply":
                 $result = $num1 * $num2;
-                $symbol = "×";
+                $symbol = "x";
                 $operationName = "Multiplication";
                 break;
 
             case "divide":
                 $operationName = "Division";
-                $symbol = "÷";
+                $symbol = "/";
 
                 if ($num2 != 0) {
                     $result = $num1 / $num2;
@@ -246,6 +246,5 @@ document.addEventListener("keydown", function(event) {
     ?>
 
 </div>
-
 </body>
 </html>
